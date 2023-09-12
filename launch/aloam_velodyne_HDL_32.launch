@@ -1,5 +1,5 @@
 <launch>
-    
+
     <param name="scan_line" type="int" value="32" />
 
     <!-- if 1, do mapping 10 Hz, if 2, do mapping 5 Hz. Suggest to use 1, it will adjust frequence automaticlly -->
@@ -8,9 +8,12 @@
     <!-- remove too closed points -->
     <param name="minimum_range" type="double" value="0.3"/>
 
-
-    <param name="mapping_line_resolution" type="double" value="0.2"/>
-    <param name="mapping_plane_resolution" type="double" value="0.4"/>
+    <!-- For RealEnvironment -->
+    <!-- <param name="mapping_line_resolution" type="double" value="0.2"/>
+    <param name="mapping_plane_resolution" type="double" value="0.4"/> -->
+    <!-- For Simulation -->
+    <param name="mapping_line_resolution" type="double" value="0.05"/>
+    <param name="mapping_plane_resolution" type="double" value="0.1"/>
 
     <node pkg="aloam_velodyne" type="ascanRegistration" name="ascanRegistration" output="screen" />
 
